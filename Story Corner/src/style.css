@@ -1,0 +1,32 @@
+:root {
+    --spacing: 1rem;
+    --bg-colour: #F2E6D8;
+    --menu-link: #5A2A27;
+    --menu-link-hover: #A34743;
+    --border-width: 0.2rem;
+    --transition: transform 0.4s ease-in-out;
+    --min-font: 16px;
+    --max-font: 20px;
+    --preferred-font: 2vw;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: var(--spacing);
+    height: 100vh;
+    background-color: var(--bg-colour);
+    display: grid;
+    grid-template-areas: 'header' 
+                         'main';
+}
+
+@media (max-width: 480px) {
+    body {
+        grid-template-columns: 1fr;
+        grid-template-areas: 'header' 
+                                'main';
+    }
+}
